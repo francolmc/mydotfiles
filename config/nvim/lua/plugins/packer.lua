@@ -59,4 +59,8 @@ return require('packer').startup(function(use)
 	use {"akinsho/toggleterm.nvim", tag = 'v1.*', config = function()
   		require("toggleterm").setup()
 	end}
+	-- debugger
+	use {
+		'puremourning/vimspector'
+	}
 end)
