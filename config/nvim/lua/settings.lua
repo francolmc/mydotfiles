@@ -40,7 +40,7 @@ exec([[
       autocmd BufNewFile *.* silent! execute '0r $HOME/.config/nvim/templates/'.expand("<afile>:e").'.tpl'
 	  autocmd BufNewFile *.controller.ts silent! execute '0r $HOME/.config/nvim/templates/controller.ts.tpl'
       autocmd BufNewFile * %s/{{YEAR}}/\=strftime('%Y')/ge
-      autocmd BufNewFile * %s/{{NAME}}/\=template_name/ge
+      autocmd BufNewFile * %s/Lorenzo Carbonell <a.k.a. atareao>/\=template_name/ge
       autocmd BufNewFile * %s/{{EVAL\s*\([^}]*\)}}/\=eval(submatch(1))/ge
   augroup END
 ]], false)
@@ -49,6 +49,6 @@ exec ([[
 	augroup readtemplates
 		au!
 	autocmd BufRead *.controller.ts silent! execute '0r $HOME/.config/nvim/templates/controller.ts.tpl'
-	autocmd BufRead * %s/{{NAME}}/\=template_name/ge
+	autocmd BufRead * %s/Lorenzo Carbonell <a.k.a. atareao>/\=template_name/ge
 	augroup END
 ]], false)
